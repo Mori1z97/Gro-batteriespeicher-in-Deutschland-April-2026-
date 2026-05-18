@@ -11,10 +11,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css"/>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f5f5; color: #190091; height: 100vh; display: flex; flex-direction: column; }
+  body { font-family: 'Aptos', 'Segoe UI', Arial, sans-serif; background: #f5f5f5; color: #181716; height: 100vh; display: flex; flex-direction: column; }
 
   #header {
-    background: #dde3f8;
+    background: #ffffff;
     padding: 12px 20px;
     display: flex;
     align-items: center;
@@ -23,11 +23,11 @@
     flex-shrink: 0;
     box-shadow: 0 2px 12px rgba(0,0,0,0.4);
   }
-  #header h1 { font-size: 16px; font-weight: 600; color: #190091; letter-spacing: 0.3px; }
+  #header h1 { font-size: 16px; font-weight: 600; color: #181716; letter-spacing: 0.3px; }
   #header .subtitle { font-size: 12px; color: #4a6a80; margin-top: 2px; }
 
   #controls {
-    background: #dde3f8;
+    background: #ffffff;
     padding: 8px 20px;
     display: flex;
     gap: 12px;
@@ -37,7 +37,7 @@
     flex-shrink: 0;
   }
   .filter-group { display: flex; align-items: center; gap: 6px; }
-  .filter-group label { font-size: 11px; color: #190091; text-transform: uppercase; letter-spacing: 0.5px; }
+  .filter-group label { font-size: 11px; color: #181716; text-transform: uppercase; letter-spacing: 0.5px; }
   select {
     background: #ffffff;
     color: #1a3a5c;
@@ -56,7 +56,7 @@
     margin-left: auto;
   }
   .stat-item { text-align: center; }
-  .stat-val { font-size: 15px; font-weight: 700; color: #190091; }
+  .stat-val { font-size: 15px; font-weight: 700; color: #181716; }
   .stat-lbl { font-size: 10px; color: #5050a0; text-transform: uppercase; }
 
   #map { flex: 1; }
@@ -74,7 +74,7 @@
   .custom-popup .leaflet-popup-content { margin: 0; }
 
   .popup-header {
-    background: linear-gradient(135deg, #190091, #2900ED);
+    background: linear-gradient(135deg, #181716, #2900ED);
     padding: 10px 14px;
     border-radius: 7px 7px 0 0;
     border-bottom: 1px solid rgba(255,255,255,0.15);
@@ -88,7 +88,7 @@
   .popup-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 4px 0; border-bottom: 1px solid rgba(25,0,145,0.1); font-size: 12px; }
   .popup-row:last-child { border-bottom: none; }
   .popup-key { color: #4a6a80; flex-shrink: 0; padding-right: 10px; }
-  .popup-val { color: #190091; text-align: right; font-weight: 500; }
+  .popup-val { color: #181716; text-align: right; font-weight: 500; }
 
   .power-bar { height: 4px; background: #e8e8f5; border-radius: 2px; margin-top: 8px; }
   .power-fill { height: 4px; background: linear-gradient(90deg, #EC0000, #EC6500); border-radius: 2px; transition: width 0.3s; }
@@ -106,7 +106,7 @@
     backdrop-filter: blur(6px);
     min-width: 160px;
   }
-  .legend h4 { color: #190091; margin-bottom: 8px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .legend h4 { color: #181716; margin-bottom: 8px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
   .legend-item { display: flex; align-items: center; gap: 8px; margin: 4px 0; color: #333333; }
   .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
   .legend-size { display: flex; align-items: center; gap: 6px; margin: 4px 0; color: #2a4a6a; }
@@ -201,6 +201,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
   maxZoom: 18
 }).addTo(map);
 
+ 
 // Legend
 const legend = L.control({ position: 'bottomright' });
 legend.onAdd = () => {
