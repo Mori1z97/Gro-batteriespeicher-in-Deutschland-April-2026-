@@ -36,6 +36,7 @@
     border-bottom: 1px solid #c0b8e8;
     flex-shrink: 0;
   }
+ 
   .filter-group { display: flex; align-items: center; gap: 6px; }
   .filter-group label { font-size: 11px; color: #181716; text-transform: uppercase; letter-spacing: 0.5px; }
   select {
@@ -57,7 +58,7 @@
   }
   .stat-item { text-align: center; }
   .stat-val { font-size: 15px; font-weight: 700; color: #181716; }
-  .stat-lbl { font-size: 10px; color: #5050a0; text-transform: uppercase; }
+  .stat-lbl { font-size: 10px; color: #181716; text-transform: uppercase; }
 
   #map { flex: 1; }
 
@@ -131,6 +132,12 @@
     z-index: 9999;
     max-width: 200px;
   }
+
+ #gradient-bar {
+  height: 5px;
+  background: linear-gradient(120deg, #2900ED, #E66209);
+  flex-shrink: 0;
+}
 </style>
 </head>
 <body>
@@ -182,7 +189,10 @@
   </div>
 </div>
 
+<div id="gradient-bar"></div>
+
 <div id="map"></div>
+ 
 <div id="tooltip"></div>
 
 <script>
