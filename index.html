@@ -92,7 +92,7 @@
   .popup-val { color: #181716; text-align: right; font-weight: 500; }
 
   .power-bar { height: 4px; background: #e8e8f5; border-radius: 2px; margin-top: 8px; }
-  .power-fill { height: 4px; background: linear-gradient(90deg, #EC0000, #EC6500); border-radius: 2px; transition: width 0.3s; }
+  .power-fill { height: 4px; background: linear-gradient(90deg, #EC6500, #2900ED); border-radius: 10px; transition: width 0.3s; }
 
   .legend {
     position: absolute;
@@ -293,7 +293,7 @@ function updateStats(data) {
 }
 
 // Max power for relative bar
-const maxKW = Math.max(...RAW_DATA.map(d => Number(d.netto_kw) || 0));
+const maxKW = 100000;
 
 function renderMap() {
   if (clusterGroup) map.removeLayer(clusterGroup);
