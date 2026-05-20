@@ -224,8 +224,18 @@ legend.onAdd = () => {
   `;
   return div;
 };
+ 
 legend.addTo(map);
-
+ 
+ const logoControl = L.control({ position: 'bottomleft' });
+logoControl.onAdd = () => {
+  const div = L.DomUtil.create('div');
+  div.innerHTML = '<img src="https://Mori1z97.github.io/Gro-batteriespeicher-in-Deutschland-April-2026-/dena_negativ_RGB_short.png" style="height:40px; opacity:0.85;">';
+  return div;
+};
+ 
+logoControl.addTo(map);
+ 
 // Populate Bundesland filter
 const bundeslaender = [...new Set(RAW_DATA.map(d => d.bundesland).filter(Boolean))].sort();
 const blSelect = document.getElementById('filterBL');
